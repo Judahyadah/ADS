@@ -65,6 +65,24 @@ ul.login{
     text-align: center;
     padding: 75px;
 }
+
+.hd-info-ad{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 75px;
+}
+
+.min-title{
+    text-align: left;
+    color: #FF80B4;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.25;
+}
 .pg-tit{
     font-size: 3.2rem;
     color: white;
@@ -824,7 +842,7 @@ p.txt-white{
 /* testimonial */
 .testimonial-section {
     position: relative;
-    margin: 50px auto;
+    /* margin: 50px auto; */
     padding: 20px;
     overflow: hidden;
 }
@@ -832,7 +850,7 @@ p.txt-white{
 .testimonial-container {
     display: flex;
     gap: 20px;
-    padding: 20px 0 20px 230px;
+    padding: 10px 0 20px 230px;
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none; /* For Firefox */
