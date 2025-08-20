@@ -835,8 +835,8 @@ p.txt-white{
 
 .fix-fl::after{
     content: "";
-  display: table;
-  clear: both;
+    display: table;
+    clear: both;
 }
 
 /* testimonial */
@@ -850,22 +850,32 @@ p.txt-white{
 .testimonial-container {
     display: flex;
     gap: 20px;
-    padding: 10px 0 20px 230px;
+    padding: 30px 0 20px 230px;
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none; /* For Firefox */
     -ms-overflow-style: none; /* For IE and Edge */
 }
 
+.text{
+    /* height: 100%; */
+}
+
+.btm{
+    position: absolute;
+    bottom: 0;
+}
+
 .testimonial-container::-webkit-scrollbar {
     display: none; /* For Chrome, Safari, and Opera */
 }
-
 .testimonial-card {
+    /* height: 330px; */
     flex: 0 0 300px;
     background: white;
     border-radius: 10px;
     padding: 25px;
+    position: relative;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
@@ -880,14 +890,18 @@ p.txt-white{
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
+    position: relative;
+    bottom: 40px;
 }
 
 .testimonial-text {
-    color: #333;
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    font-style: italic;
+    box-sizing: border-box;
+    margin: 0px 0px 24px;
+    min-width: 0px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
 }
 
 .testimonial-author {
