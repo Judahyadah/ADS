@@ -609,6 +609,7 @@ p.txt-white{
     background-color: #6037ad;
     color: white;
     width: 60%;
+    font-size: 18px;
     clip-path: polygon(0 0, 100% 0, calc(100% - 5.5px) 50%, 100% 100%, 0 100%);
 }
 
@@ -617,6 +618,7 @@ p.txt-white{
     background-color: #636363;
     color: white;
     width: 60%;
+    font-size: 18px;
     clip-path: polygon(0 0, 100% 0, calc(100% - 5.5px) 50%, 100% 100%, 0 100%);
 }
 
@@ -625,6 +627,7 @@ p.txt-white{
     background-color: #109b2e;
     color: white;
     width: 60%;
+    font-size: 18px;
     clip-path: polygon(0 0, 100% 0, calc(100% - 5.5px) 50%, 100% 100%, 0 100%);
 }
 
@@ -706,6 +709,10 @@ p.txt-white{
     text-align: left;
     color: #5D6A77;
     font-size: 20px;
+}
+
+.lit-tx{
+    font-size: 13px;
 }
 
 .crd-over .card {
@@ -870,7 +877,7 @@ p.txt-white{
     display: none; /* For Chrome, Safari, and Opera */
 }
 .testimonial-card {
-    /* height: 330px; */
+    height: 500px;
     flex: 0 0 300px;
     background: white;
     border-radius: 10px;
@@ -965,6 +972,41 @@ p.txt-white{
     background: #6c2bd9;
 }
 
+.mindtitle{
+    color: #fff;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+.row{
+    display: flex;
+}
+
+.tap{
+    text-align: left;
+    flex: 1;
+}
+
+.tap-right{
+    text-align: center;
+    width: 100%;
+}
+
+.txt-cent{
+    text-align: center;
+}
+t-col{
+    color: #05192D;
+}
+
+.tap h1{
+    color: #7933ff;
+    font-size: 70px;
+    margin-bottom: 0;
+}
 
 /* media queries */
 @media(max-width: 1487px){
