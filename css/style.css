@@ -30,6 +30,11 @@ li a {
   border-radius: 10px;
 }
 
+.nav-btna{
+    padding: 10px !important;
+    margin: 10px !important;
+}
+
 .h-size{
     height: 50px;
     text-align: center;
@@ -508,6 +513,12 @@ a{
     margin-bottom: 0;
 }
 
+.mb-10{
+    margin-bottom: 10px;
+    align-items: center;
+    display: flex;
+}
+
 p.txt-white{
     padding-bottom: 20px;
 }
@@ -521,6 +532,21 @@ p.txt-white{
 
 .fw-800{
     font-weight: 800;
+}
+
+.appl{
+    font-size: 28px !important;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.grad{
+    background: #03EF62;
+    padding: 10px;
+    border-radius: 50%;
+    color: #00000082;
+    margin-right: 10px;
 }
 
 .dld-btn{
@@ -703,6 +729,10 @@ p.txt-white{
 .fl-left{
     float: left;
     text-align: left;
+}
+
+.small{
+    font-size: 13px;
 }
 
 .des{
@@ -1175,3 +1205,4 @@ t-col{
   margin-top: 20px;
   font-size: 14px;
   color: #aaa;
+}
