@@ -1,8 +1,8 @@
-body{
+*{
     margin: 0;
     font-family: Studio-Feixen-Sans, Arial, sans-serif;
-    color: #fff;
 }
+
 .preview{
     background: #05192D;
     padding: 64px 0;
@@ -22,7 +22,7 @@ li {
 li a {
   display: block;
   color: white;
-  font-size: 1.275rem;
+  font-size: 16px;
   text-align: center;
   padding: 16px;
   text-decoration: none;
@@ -31,7 +31,7 @@ li a {
 }
 
 .nav-btna{
-    padding: 10px !important;
+    padding: 5px 10px !important;
     margin: 10px !important;
 }
 
@@ -89,9 +89,10 @@ ul.login{
     line-height: 1.25;
 }
 .pg-tit{
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     color: white;
     text-align: left;
+    font-weight: 700;
 }
 .desc{
     font-size: 1.4rem;
@@ -103,8 +104,10 @@ ul.login{
     border-radius: 10px;
     width: 361px;
 }
+
 .hd-info.al-lft{
     align-items: start;
+    place-content: flex-start;
 }
 .btn-dub{
     display: flex;
@@ -183,8 +186,8 @@ span.wt-col{
     box-sizing: border-box;
     margin: 0;
     min-width: 0;
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1.25rem;
+    font-weight: 700;
     letter-spacing: -0.5px;
     line-height: 1.2;
     margin-top: 0;
@@ -259,8 +262,8 @@ button.soc-btn{
 
 label b{
     font-style: normal;
-    font-size: 20px;
-    font-weight: 800;
+    font-size: 17px;
+    font-weight: 700;
     color: #05192d;
 }
 
@@ -269,8 +272,10 @@ input{
     border-radius: 4px;
     box-shadow: inset 0 0 0 2px rgb(229, 225, 218);
     box-sizing: border-box;
-    padding: 20px;
+    padding: 13px;
     width: 100%;
+    font-size: 16px;
+    margin-top: 5px;
 }
 .btn-frm{
     width: 80%;
@@ -509,6 +514,10 @@ a{
     padding-top: 0;
 }
 
+.p-rem{
+    padding: 0 9.5% 0 9.5%;
+}
+
 .mb-0{
     margin-bottom: 0;
 }
@@ -729,6 +738,23 @@ p.txt-white{
 .fl-left{
     float: left;
     text-align: left;
+}
+
+.fl-lefts{
+    text-align: left;
+    place-content: baseline;
+}
+
+.fs-16{
+    font-size: 16px
+}
+.ff-mil{
+    font-family: Studio-Feixen-Sans, Arial;
+}
+
+.btns{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .small{
@@ -1156,6 +1182,7 @@ t-col{
 
 .footer-column ul li a {
   color: #ccc;
+  background-color: transparent;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -1185,6 +1212,7 @@ t-col{
 
 .footer-links a:hover {
   color: #fff;
+  background-color: none;
 }
 
 .footer-social a {
@@ -1206,3 +1234,4 @@ t-col{
   font-size: 14px;
   color: #aaa;
 }
+
