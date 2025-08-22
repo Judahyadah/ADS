@@ -1088,6 +1088,20 @@ t-col{
     }
 }
 
+@media(max-width: 847px){
+    .slf2{
+    margin: 0 100px!important;
+    padding: 0 16px;
+    }
+
+    .hd-rvr{
+    display: flex;
+    flex-direction: column;
+    margin: 0 100px!important;
+    padding: 0 16px;
+    }
+}
+
 @media (max-width: 790px){
     .soc-col{
         flex-direction: column !important;
@@ -1100,11 +1114,18 @@ t-col{
         padding-left: 0;
         padding-right: 0;
     }
+    .pad-red img{
+        max-width: -webkit-fill-available;
+    }
 }
 
 @media (max-width: 500px){
     .hd{
         margin: 0 30px;
+    }
+    .slf2, .hd-rvr{
+    margin: 0 0 !important;
+    padding: 0 16px;
     }
 }
 

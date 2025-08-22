@@ -296,3 +296,20 @@ body {
 #mre{
     padding: 20px 16px;
 }
+
+
+@media(max-width: 776px){
+    .course-cat {
+    position: relative;
+    top: -34px;
+    margin: 0 0;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 10px;
+}
+}
+@media(max-width: 590px){
+    .card-md {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
