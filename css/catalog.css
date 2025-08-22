@@ -284,7 +284,7 @@ body {
     margin: 10px 0;
 }
 
-.app-button{
+.app-button .store-buttons{
     justify-content: center;
     margin: 18px;
 }

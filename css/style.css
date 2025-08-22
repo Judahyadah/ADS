@@ -919,11 +919,6 @@ p.txt-white{
     scrollbar-width: none; /* For Firefox */
     -ms-overflow-style: none; /* For IE and Edge */
 }
-
-.text{
-    /* height: 100%; */
-}
-
 .btm{
     position: absolute;
     bottom: 0;
@@ -1163,6 +1158,10 @@ t-col{
   margin: 0 auto;
 }
 
+.footer-column {
+
+}
+
 .footer-column h4 {
   font-size: 16px;
   font-weight: bold;
@@ -1235,3 +1234,154 @@ t-col{
   color: #aaa;
 }
 
+/* Tablet View - iPad and similar devices */
+@media screen and (max-width: 1024px) {
+    .p-rem {
+        padding: 0 5% 0 5%;
+    }
+    
+    ul {
+        padding: 15px 30px 8px 30px;
+    }
+    
+    li a {
+        font-size: 15px;
+        padding: 12px;
+    }
+    
+    .nav-btna {
+        padding: 4px 8px !important;
+        margin: 8px !important;
+        font-size: 14px;
+    }
+}
+
+/* Mobile View - Phones in landscape */
+@media screen and (max-width: 768px) {
+    .p-rem {
+        padding: 0 3% 0 3%;
+    }
+    
+    ul {
+        padding: 10px 20px 5px 20px;
+        text-align: center;
+    }
+    
+    li {
+        float: none;
+        display: inline-block;
+        margin: 0 5px;
+    }
+    
+    li a {
+        font-size: 14px;
+        padding: 10px 8px;
+    }
+    
+    .right {
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .login li {
+        display: inline-block;
+        margin: 0 3px;
+    }
+    
+    .nav-btna {
+        padding: 6px 12px !important;
+        margin: 5px !important;
+        font-size: 13px;
+    }
+}
+
+/* Mobile View - Small phones */
+@media screen and (max-width: 480px) {
+    .p-rem {
+        padding: 0 2% 0 2%;
+    }
+    
+    ul {
+        padding: 8px 15px 5px 15px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    li {
+        float: none;
+        display: block;
+        width: 100%;
+        margin: 2px 0;
+    }
+    
+    li a {
+        font-size: 13px;
+        padding: 8px 6px;
+        margin: 0 2px;
+        display: inline-block;
+        width: auto;
+    }
+    
+    .right {
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    .login {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .login li {
+        flex: 0 0 auto;
+    }
+    
+    .nav-btna {
+        padding: 8px 15px !important;
+        margin: 5px !important;
+        font-size: 12px;
+        min-width: 80px;
+    }
+}
+
+/* Extra small phones */
+@media screen and (max-width: 320px) {
+    ul {
+        padding: 5px 10px;
+    }
+    
+    li a {
+        font-size: 12px;
+        padding: 6px 4px;
+    }
+    
+    .nav-btna {
+        padding: 6px 10px !important;
+        margin: 3px !important;
+        font-size: 11px;
+        min-width: 70px;
+    }
+}
+
+/* Hamburger menu for very small screens (optional enhancement) */
+@media screen and (max-width: 480px) {
+    .header {
+        position: relative;
+    }
+    
+    /* Stack navigation vertically on small screens */
+    .mt-0.p-rem {
+        flex-direction: column;
+    }
+    
+    /* Make sure buttons don't overflow */
+    .right ul.login {
+        justify-content: space-around;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
