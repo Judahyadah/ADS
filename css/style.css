@@ -1099,6 +1099,9 @@ p.txt-white{
     font-weight: 700;
 }
 
+.wdt{
+    width: 100px;
+}
 .card button:hover {
     background-color: #03101d;
 }
