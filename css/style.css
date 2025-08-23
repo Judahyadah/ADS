@@ -68,7 +68,7 @@ ul.login{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 75px;
+    padding: 30px 75px;
 }
 
 .hd-info-ad{
@@ -332,6 +332,10 @@ input{
     padding: 20px 50px 10px 50px;
 }
 
+.fs-16{
+    font-size: 16px;
+}
+
 .crs-inf{
     color: #05192D;
     background-color: #F7F7FC;
@@ -401,6 +405,7 @@ input{
 
 .course-card>h2{
     color: #05192D;
+    font-size: 1.25rem;
 }
 
 .icon{
@@ -1076,6 +1081,10 @@ t-col{
         /* margin: 90px; */
         /* padding-bottom: 90px; */
     }
+    .hd-info.al-lft {
+    align-items: center;
+    place-content: flex-start;
+    }
     .course-info{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1111,8 +1120,8 @@ t-col{
         padding-left: 0;
     }
     .hd-info{
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 15px;
+        padding-right: 15px;
     }
     .pad-red img{
         max-width: -webkit-fill-available;

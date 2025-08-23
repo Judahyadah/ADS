@@ -5,6 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>DC | ADS</title>
+    <link rel="stylesheet" href="./css/nav.css" />
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/catalog.css" />
         <link rel="stylesheet"
@@ -29,27 +30,31 @@
 
     <body>
         <div class="preview pad-0">
-            <div class="header">
-                <navbar>
-                    <ul class="mt-0 p-rem">
-                        <li><a href="index.html">Catalog</a></li>
-                        <li><a href="blogs.html">Blog</a></li>
-                        <li><a href="course-all.html">Course Catalog</a></li>
-                        <li><a href="faq.html">DataLab</a></li>
+<!-- Menu bars (hamburger) -->
+    <div class="menu-bars" id="menu-bars">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
 
-                        <!-- form -->
-                        <div class="right">
-                            <ul class="login">
-                                <!-- <li><i class="fa fa-search"></i></li> -->
-                                <li><a href="login" class="bg-white-opq side nav-btna">Log
-                                        in</a></li>
-                                <li><a href="login" class="bg-white-opq nav-btna">Get
-                                        Started</a></li>
-                            </ul>
-                        </div>
+    <!-- Mobile navigation overlay -->
+    <div class="header" id="header">
+        <navbar>
+            <ul>
+                <li id="nav-1"><a href="index.html">Home</a></li>
+                <li id="nav-2"><a href="blogs.html">Blog</a></li>
+                <li id="nav-3"><a href="course-all.html">Course Catalog</a></li>
+                <li id="nav-4"><a href="login.html">Login</a></li>
+                <li id="nav-5"><a href="signip.html">SignUp</a></li>
+                <li class="right">
+                    <ul class="login">
+                        <li><a href="login" class="bg-white-opq side nav-btna">Log in</a></li>
+                        <li><a href="login" class="bg-white-opq nav-btna">Get Started</a></li>
                     </ul>
-                </navbar>
-            </div>
+                </li>
+            </ul>
+        </navbar>
+    </div>
             <div class="hd org">
                 <div class="hd-info al-lft">
                     <span class="mb-10">
@@ -692,6 +697,7 @@ accordions.forEach(accordion => {
 });
 
 </script>
+<script src="./script/script.js"></script>
     </body>
 
 </html>
