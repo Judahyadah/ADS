@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Optional: Close menu when clicking on a nav link
-  const navLinks = document.querySelectorAll('navbar li a')
+  const navLinks = document.querySelectorAll('nav li a')
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       if (isMenuOpen) {
