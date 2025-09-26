@@ -1,3 +1,4 @@
+/* Navigation CSS - Fixed to prevent page overextension */
 
 * {
     margin: 0;
@@ -5,9 +6,11 @@
     box-sizing: border-box;
 }
 
+/* Prevent horizontal scroll on body */
 body {
     font-family: Arial, sans-serif;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden; /* This is good - keeps it */
+    position: relative; /* Add this for better positioning context */
 }
 
 /* Desktop styles */
@@ -55,22 +58,28 @@ ul.login {
     display: none;
 }
 
-/* Mobile styles - Fixed version */
+/* Mobile styles - FIXED VERSION */
 @media (max-width: 800px) {
-    body {
-        position: relative; /* Ensure proper positioning context */
+    /* Prevent body scroll when menu is open */
+    body.menu-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
     }
 
     .header {
         position: fixed;
-        z-index: 9;
+        z-index: 9999; /* Increased z-index to ensure it's on top */
         top: 0;
         left: 0;
-        width: 100%; /* Changed from 100vw to 100% */
-        height: 100%; /* Changed from 100vh to 100% */
+        width: 100vw; /* Use vw instead of % for full viewport width */
+        height: 100vh; /* Use vh instead of % for full viewport height */
         background-color: rgba(0, 0, 0, 0.7);
-        transform: translateX(-100%); /* Changed from -100vw to -100% */
-        overflow: hidden; /* Prevent any overflow */
+        transform: translateX(-100vw); /* Use vw for consistent translation */
+        overflow: hidden;
+        /* Add these properties to prevent any overflow */
+        max-width: 100vw;
+        max-height: 100vh;
     }
 
     .overlay-slide-right {
@@ -80,17 +89,20 @@ ul.login {
 
     .overlay-slide-left {
         transition: all 0.8s ease-in-out;
-        transform: translateX(-100%); /* Changed from -100vw to -100% */
+        transform: translateX(-100vw); /* Use vw for consistency */
     }
 
     nav {
         height: 100%;
         width: 100%;
+        max-width: 100vw; /* Ensure nav doesn't exceed viewport */
+        max-height: 100vh;
     }
 
     nav ul {
         height: 100%;
         width: 100%;
+        max-width: 100%; /* Ensure ul doesn't exceed container */
         margin: 0;
         padding: 0;
         display: flex;
@@ -99,14 +111,17 @@ ul.login {
         list-style: none;
         letter-spacing: 4px;
         text-align: center;
+        overflow: hidden; /* Prevent any content overflow */
     }
 
     nav ul li {
         height: 20%;
         width: 100%;
+        max-width: 100%; /* Ensure li doesn't exceed container */
         overflow: hidden;
         background-color: #05192D;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        flex-shrink: 0; /* Prevent shrinking */
     }
 
     nav li a {
@@ -115,21 +130,25 @@ ul.login {
         justify-content: center;
         height: 100%;
         width: 100%;
+        max-width: 100%; /* Ensure anchor doesn't exceed container */
         color: white;
         font-size: 16px;
         text-decoration: none;
         transition: all 0.3s ease-in;
         position: relative;
+        overflow: hidden; /* Prevent text overflow */
+        word-wrap: break-word; /* Handle long text */
+        text-overflow: ellipsis; /* Handle overflow text */
     }
 
     nav li a:hover {
-        transform: scale(1.1); /* Reduced scale to prevent overflow */
+        transform: scale(1.05); /* Reduced from 1.1 to prevent overflow */
         background-color: rgba(255, 255, 255, 0.1);
     }
 
     nav li a::before {
         content: "";
-        width: 50%; /* Changed from 25vh to percentage */
+        width: 50%;
         height: 3px;
         background-color: whitesmoke;
         position: absolute;
@@ -148,49 +167,59 @@ ul.login {
     .right {
         height: 20%;
         width: 100%;
+        max-width: 100%; /* Ensure doesn't exceed container */
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: hidden; /* Prevent overflow */
     }
 
     .login {
         display: flex;
         gap: 10px;
         list-style: none;
-        flex-wrap: wrap; /* Allow wrapping if needed */
+        flex-wrap: wrap;
         justify-content: center;
+        max-width: 100%; /* Ensure doesn't exceed container */
+        padding: 0 10px; /* Add some padding to prevent edge touching */
     }
 
     .login li {
-        flex: none; /* Don't grow or shrink */
+        flex: none;
+        max-width: calc(50% - 5px); /* Ensure buttons don't exceed container */
     }
 
     .login li a {
-        padding: 10px 20px;
+        padding: 10px 15px; /* Reduced padding to prevent overflow */
         border-radius: 5px;
         background-color: rgba(255, 255, 255, 0.2);
         color: white;
         text-decoration: none;
         transition: all 0.3s ease;
-        white-space: nowrap; /* Prevent text wrapping */
+        white-space: nowrap;
+        font-size: 14px; /* Slightly smaller font for better fit */
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 
     .login li a:hover {
         background-color: rgba(255, 255, 255, 0.3);
-        transform: scale(1.05);
+        transform: scale(1.02); /* Reduced scale to prevent overflow */
     }
 
     /* Menu bars */
     .menu-bars {
-        display: block; /* Show on mobile */
+        display: block;
         position: fixed;
         top: 1rem;
         left: 2rem;
-        z-index: 10;
+        z-index: 10000; /* Higher than header to stay on top */
         cursor: pointer;
         padding: 10px;
         background-color: rgba(255, 255, 255, 0.9);
         border-radius: 5px;
+        /* Ensure menu bars don't cause overflow */
+        max-width: calc(100vw - 4rem);
     }
 
     .bar1, .bar2, .bar3 {
@@ -215,7 +244,7 @@ ul.login {
         transform: rotate(45deg) translate(-8px, -7px);
     }
 
-    /* Slide animations for nav items */
+    /* Slide animations for nav items - Keep existing animations */
     .slide-in-1 { animation: slide-in 0.4s linear 0.2s both; }
     .slide-in-2 { animation: slide-in 0.4s linear 0.4s both; }
     .slide-in-3 { animation: slide-in 0.4s linear 0.6s both; }
@@ -250,14 +279,9 @@ ul.login {
         }
     }
 
-    /* Hide original navigation items on mobile */
     .p-rem {
         padding: 0 2% 0 2%;
     }
-    
-    /* ul:not(.login) {
-        display: none;
-    } */
 }
 
 /* Additional responsive fixes */
@@ -269,29 +293,38 @@ ul.login {
     
     nav li a {
         font-size: 14px;
+        letter-spacing: 2px; /* Reduced letter spacing for better fit */
     }
     
     .login li a {
-        padding: 8px 15px;
-        font-size: 14px;
+        padding: 8px 12px; /* Further reduced padding */
+        font-size: 13px;
     }
 }
 
 @media screen and (max-width: 320px) {
     nav li a {
         font-size: 12px;
+        letter-spacing: 1px; /* Further reduced for small screens */
     }
     
     .login li a {
-        padding: 6px 12px;
+        padding: 6px 10px;
         font-size: 12px;
+    }
+    
+    .menu-bars {
+        left: 0.5rem;
+        padding: 8px;
     }
 }
 
-/* Demo content */
+/* Demo content - ensure it doesn't interfere */
 .content {
     padding: 20px;
-    margin-top: 80px; /* Space for fixed header */
+    margin-top: 80px;
     background-color: #f5f5f5;
     min-height: 100vh;
+    max-width: 100vw; /* Prevent content from exceeding viewport */
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
